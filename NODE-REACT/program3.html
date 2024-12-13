@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validation</title>
+        <script>
+            function val()
+            {
+                if(document.getElementById("name").value=="")
+                {
+                    window.alert("enter the name");
+                    document.getElementById("name").focus();
+                    return false;
+
+                }
+                if(document.getElementById("dob").value=="")
+                {
+                    window.alert("Date of Birth");
+                    document.getElementById("dob").focus();
+                    return false;
+                }
+                if(document.getElementById("phone").value=="")
+                {
+                    window.alert("enter the phonenumber");
+                    document.getElementById("phone").focus();
+                    return false;
+                }
+                return true;
+            }    
+        </script>
+    </head>
+    <body>
+        <form id="f" action="submit" onsubmit="return val()">
+            <table border="2px">
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">DOB:</label></td>
+                    <td><input type="text" id="dob"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone number:</label></td>
+                    <td><input type="number" id="phone"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><center><input type="submit"></center></td>
+                </tr>
+            </table>
+        </form>   
+    </body>
+</html>
